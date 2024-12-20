@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ввод пользователя</title>
+</head>
+<body>
+  <h1>Пример ввода пользователя</h1>
+  
+  <!-- Поле для ввода -->
+  <label for="user-input">Введите ваше имя:</label>
+  <input type="text" id="user-input" placeholder="Ваше имя">
+
+  <!-- Кнопка для отправки -->
+  <button onclick="processInput()">Отправить</button>
+
+  <!-- Блок для отображения результата -->
+  <p id="output"></p>
+
+  <script>
+    // Функция для обработки данных
+    function processInput() {
+      // Получение значения из поля ввода
+      const name = document.getElementById('user-input').value;
+
+      // Проверка, если поле пустое
+      if (name.trim() === "") {
+        alert("Пожалуйста, введите ваше имя!");
+        return;
+      }
+
+      // Отображение результата
+      document.getElementById('output').innerText = Привет, ${name}!;
+    }
+  </script>
+</body>
+</html>
