@@ -20,6 +20,8 @@ urlpatterns = [
     path('page12', views.page12, name='page12' ),
     path('page13', views.page13, name='page13' ),
     path('politicconf', views.politicconf, name='politicconf' ),
-    
+    path('rules', views.rules, name='rules' ),
+    path('faq', views.faq, name='faq' ),
+    path('aboutus', views.aboutus, name='aboutus' ),
 
 ]    

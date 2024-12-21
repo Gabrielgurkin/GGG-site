@@ -50,3 +50,12 @@ def page13(request):
 
 def politicconf(request):
     return render(request, "main/politicconf.html")
+
+def rules(request):
+    return render(request, "main/rules.html")
+
+def faq(request):
+    return render(request, "main/faq.html")
+
+def aboutus(request):
+    return render(request, "main/aboutus.html")
