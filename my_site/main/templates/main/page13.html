@@ -1,38 +1,43 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ввод пользователя</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <title>TravelHelp</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
 </head>
 <body>
-  <h1>Пример ввода пользователя</h1>
-  
-  <!-- Поле для ввода -->
-  <label for="user-input">Введите ваше имя:</label>
-  <input type="text" id="user-input" placeholder="Ваше имя">
-
-  <!-- Кнопка для отправки -->
-  <button onclick="processInput()">Отправить</button>
-
-  <!-- Блок для отображения результата -->
-  <p id="output"></p>
-
-  <script>
-    // Функция для обработки данных
-    function processInput() {
-      // Получение значения из поля ввода
-      const name = document.getElementById('user-input').value;
-
-      // Проверка, если поле пустое
-      if (name.trim() === "") {
-        alert("Пожалуйста, введите ваше имя!");
-        return;
-      }
-
-      // Отображение результата
-      document.getElementById('output').innerText = Привет, ${name}!;
-    }
-  </script>
+<div style="width: 100%; height: 100%; position: relative; background: #DEDEDE">
+  <div style="width: 1220px; height: 3528px; left: 107px; top: 147px; position: absolute; background: #F57377; border-radius: 60px"></div>
+  <div style="width: 1084px; left: 180px; top: 235px; position: absolute"><span style="color: white; font-size: 64px; font-family: Alternate Gothic No.1; font-weight: 700; word-wrap: break-word">Детали расчета<br/></span><span style="color: white; font-size: 48px; font-family: Geologica; font-weight: 500; word-wrap: break-word"> <br/>Путешествие в: Париж, Франция   Длительность: 7 дней   Количество путешественников: 2 человека    </span><span style="color: white; font-size: 48px; font-family: Geologica; font-weight: 700; word-wrap: break-word">1. Транспорт: <br/></span><span style="color: white; font-size: 48px; font-family: Geologica; font-weight: 500; word-wrap: break-word">   </span><span style="color: white; font-size: 40px; font-family: Geologica; font-weight: 400; word-wrap: break-word">- Авиабилеты:   Примерная стоимость: 500 € (туда-обратно на одного человека).   Итого: 1000 €.   - Трансфер из аэропорта:   Такси: 50 € (в одну сторону).   Итого: 100 €.   </span><span style="color: white; font-size: 48px; font-family: Geologica; font-weight: 500; word-wrap: break-word">   </span><span style="color: white; font-size: 48px; font-family: Geologica; font-weight: 700; word-wrap: break-word">2. Проживание: <br/></span><span style="color: white; font-size: 48px; font-family: Geologica; font-weight: 500; word-wrap: break-word">   </span><span style="color: white; font-size: 40px; font-family: Geologica; font-weight: 400; word-wrap: break-word">- Отель 4 звезды:   Средняя цена за ночь: 150 € (за двухместный номер).   Итого: 150 € × 7 ночей = 1050 €.   </span><span style="color: white; font-size: 48px; font-family: Geologica; font-weight: 500; word-wrap: break-word">   </span><span style="color: white; font-size: 48px; font-family: Geologica; font-weight: 700; word-wrap: break-word">3. Питание:<br/></span><span style="color: white; font-size: 48px; font-family: Geologica; font-weight: 500; word-wrap: break-word">   </span><span style="color: white; font-size: 40px; font-family: Geologica; font-weight: 400; word-wrap: break-word">- Завтрак (включен в стоимость отеля): Бесплатно.   - Обеды: 20 € на человека × 2 человека × 7 дней = 280 €.   - Ужины: 40 € на человека × 2 человека × 7 дней = 560 €. </span><span style="color: white; font-size: 48px; font-family: Geologica; font-weight: 500; word-wrap: break-word">   Итого за питание: 840 €.    </span><span style="color: white; font-size: 48px; font-family: Geologica; font-weight: 700; word-wrap: break-word">4. Развлечения и экскурсии: <br/> </span><span style="color: white; font-size: 48px; font-family: Geologica; font-weight: 500; word-wrap: break-word">  </span><span style="color: white; font-size: 40px; font-family: Geologica; font-weight: 400; word-wrap: break-word">- Посещение Лувра: 17 € на человека × 2 = 34 €.   - Экскурсия на Эйфелеву башню: 25 € на человека × 2 = 50 €.   - Прогулка на кораблике по Сене: 30 € на человека × 2 = 60 €</span><span style="color: white; font-size: 40px; font-family: Geologica; font-weight: 500; word-wrap: break-word">. </span><span style="color: white; font-size: 48px; font-family: Geologica; font-weight: 500; word-wrap: break-word">    Итого за развлечения: 144 €.    </span><span style="color: white; font-size: 48px; font-family: Geologica; font-weight: 700; word-wrap: break-word">5. Дополнительные расходы: <br/></span><span style="color: white; font-size: 48px; font-family: Geologica; font-weight: 500; word-wrap: break-word">  </span><span style="color: white; font-size: 40px; font-family: Geologica; font-weight: 400; word-wrap: break-word">- Сувениры и мелкие покупки: 150 €.   - Страховка на 7 дней: 15 € на человека × 2 = 30 €. </span><span style="color: white; font-size: 48px; font-family: Geologica; font-weight: 500; word-wrap: break-word">     </span><span style="color: white; font-size: 48px; font-family: Geologica; font-weight: 600; word-wrap: break-word">Общая стоимость поездки:</span><span style="color: white; font-size: 48px; font-family: Geologica; font-weight: 500; word-wrap: break-word"> <br/>  </span><span style="color: white; font-size: 40px; font-family: Geologica; font-weight: 400; word-wrap: break-word">Транспорт: 1100 €   Проживание: 1050 €   Питание: 840 €   Развлечения: 144 €   Дополнительные расходы: 180 € </span><span style="color: white; font-size: 48px; font-family: Geologica; font-weight: 500; word-wrap: break-word">    </span><span style="color: white; font-size: 64px; font-family: Geologica; font-weight: 700; word-wrap: break-word">Итого: 3314 €</span><span style="color: white; font-size: 48px; font-family: Geologica; font-weight: 500; word-wrap: break-word"> </span></div>
+  <div style="width: 1385px; height: 100px; left: 27px; top: 20px; position: absolute; background: #2C6B76; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) inset; border-radius: 55px; overflow: hidden; border: 1px black solid">
+  <aside>
+    <ul>
+      <div style="width: 408px; height: 93px; left: 107px; top: 898px; position: absolute; color: white; font-size: 16px; font-family: Georgia; font-weight: 400; word-wrap: break-word"><a href="rules"><li>Правила пользования платформой</li></a></div>
+      <div style="width: 408px; height: 93px; left: 107px; top: 938px; position: absolute; color: white; font-size: 16px; font-family: Georgia; font-weight: 400; word-wrap: break-word"><a href="politicconf"><li>Политика конфиденциальности</li></a></div>
+      <div style="width: 408px; height: 93px; left: 107px; top: 978px; position: absolute; color: white; font-size: 16px; font-family: Georgia; font-weight: 400; word-wrap: break-word"><a href="faq"><li>FAQ</li></a></div>
+      <div style="left: 872px; top: 14px; position: absolute; color: white; font-size: 25px; font-family: Georgia; font-weight: 400; line-height: 72px; word-wrap: break-word"><a href="faq"><li>FAQ</li></a></div>
+      <div style="left: 1041px; top: 14px; position: absolute; color: white; font-size: 25px; font-family: Georgia; font-weight: 400; line-height: 72px; word-wrap: break-word"><a href="aboutus"><li>О нас</li></a></div>
+      <div style="left: 1200px; top: 14px; position: absolute; color: #2C6B76; font-size: 25px; font-family: Georgia; font-weight: 700; line-height: 72px; word-wrap: break-word"><a href="page"><li>Главная</li></a></div>
+      <div style="left: 27px; top: 14px; position: absolute; color: white; font-size: 40px; font-family:Alternate Gothic No.1; font-weight: 610; word-wrap: break-word"><a href="page"><li>TravelHelp</li></a></div>
+    </ul>
+  </aside>
+  <div style="left: 523px; top: 30px; position: absolute; color: white; font-size: 24px; font-family: Alternate Gothic No.1; font-weight: 600; word-wrap: break-word">8(995) 500-44-65</div>
+  <img style="width: 50px; height: 50px; left: 460px; top: 25px; position: absolute; border-radius: 9999px" src="{% static 'main/img/phone.png' %}"/>
+  </div>
+  <div style="width: 886px; height: 72px; left: 264px; top: 316px; position: absolute; text-align: center; color: white; font-size: 48px; font-family: Inter; font-weight: 700; line-height: 72px; word-wrap: break-word"> </div>
+  <div style="width: 1382px; height: 227px; left: 26px; top: 3733px; position: absolute">
+  <div style="width: 1382px; height: 227px; left: 0px; top: 0px; position: absolute; background: #2C6B76; border-top-left-radius: 55px; border-top-right-radius: 55px"></div>
+  <div style="width: 318.31px; height: 59px; left: 415.10px; top: 23px; position: absolute"><span style="color: white; font-size: 24px; font-family: Alternate Gothic No.1; font-weight: 800; word-wrap: break-word">8 (977) 811-88-87<br/></span><span style="color: white; font-size: 20px; font-family: Inter; font-weight: 300; word-wrap: break-word">Отдел заботы о пользователях</span></div>
+  <div style="width: 277.40px; height: 56px; left: 79.83px; top: 23px; position: absolute"><span style="color: white; font-size: 24px; font-family: Alternate Gothic No.1; font-weight: 800; word-wrap: break-word">8 (915) 051-26-04<br/></span><span style="color: white; font-size: 20px; font-family: Inter; font-weight: 300; word-wrap: break-word">Контактный центр</span></div>
+  <div style="width: 407.12px; height: 93px; left: 79.83px; top: 101px; position: absolute; color: white; font-size: 16px; font-family: Inter; font-weight: 400; word-wrap: break-word">Правила пользования Платформой<br/><br/><a href="rules"><li>Правила пользования платформой</li></a><br/><br/>FAQ</div>
+  <div style="width: 407.12px; height: 93px; left: 79.83px; top: 101px; position: absolute; color: white; font-size: 16px; font-family: Inter; font-weight: 400; word-wrap: break-word">Правила пользования Платформой
+    <div style="width: 407.12px; height: 93px; left: 79.83px; top: 101px; position: absolute; color: white; font-size: 16px; font-family: Inter; font-weight: 400; word-wrap: break-word">Правила пользования Платформой
+  <div style="width: 196.57px; height: 93px; left: 421.09px; top: 116px; position: absolute; color: #878383; font-size: 48px; font-family: Alternate Gothic No.1; font-weight: 500; word-wrap: break-word">16+</div>
+  </div>
+  </div>
 </body>
 </html>

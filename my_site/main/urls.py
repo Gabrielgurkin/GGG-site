@@ -6,7 +6,7 @@ urlpatterns = [
     path('', views.index ),
     path('page', views.page, name='home' ),
     path('page0', views.page0, name='page0' ),
-    path('page1', views.page1, name='page`' ),
+    path('page1', views.page1, name='page1' ),
     path('page2', views.page2, name='page2' ),
     path('page3', views.page3, name='page3' ),
     path('page4', views.page4, name='page4' ),
@@ -23,5 +23,4 @@ urlpatterns = [
     path('rules', views.rules, name='rules' ),
     path('faq', views.faq, name='faq' ),
     path('aboutus', views.aboutus, name='aboutus' ),
-
 ]    

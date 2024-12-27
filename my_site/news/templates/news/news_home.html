@@ -1,12 +1,15 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, intial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE-edge">
-    <title>TravelHelp</title>
-</head>
-<body>
-    <h1>Новости на сайте</h1>
-</body>
-</html>
+{% extends 'main/layout.html' %}
+
+{% block title %}Сумма Вашей поездки{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>{{ title }}</h1>
+        <p>Ничего</p>
+        <button class="btn btn-warning">На страницу про нас</button>
+
+        {% for el in values %}
+            <p>{{ el }}</p>
+        {% endfor %}
+    </div>
+{% endblock %}

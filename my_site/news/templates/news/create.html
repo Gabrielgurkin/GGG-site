@@ -1,3 +1,4 @@
+
 {% load static %}
 <!DOCTYPE html>
 <html lang="ru">
@@ -8,15 +9,15 @@
     <title>TravelHelp</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'main/js/script.js' %}">
 </head>
 <body>
     <div style="width: 100%; height: 100%; position: relative; background: #DEDEDE">
         <div style="width: 1385px; height: 227px; left: 27px; top: 797px; position: absolute; background: #2C6B76; border-top-left-radius: 55px; border-top-right-radius: 55px"></div>
-        <div style="width: 278px; height: 56px; left: 107px; top: 820px; position: absolute"><span style="color: white; font-size: 24px; font-family: Alternate Gothic No.1; font-weight: 800; word-wrap: break-word">8 (915) 051-26-04<br/></span><span style="color: white; font-size: 20px; font-family: Alternate Gothic No.1; font-weight: 300; word-wrap: break-word">Контактный центр</span></div>
-        <div style="width: 319px; height: 59px; left: 443px; top: 820px; position: absolute"><span style="color: white; font-size: 24px; font-family: Alternate Gothic No.1; font-weight: 800; word-wrap: break-word">8 (977) 811-88-87<br/></span><span style="color: white; font-size: 20px; font-family: Alternate Gothic No.1; font-weight: 300; word-wrap: break-word">Отдел заботы о пользователях</span></div>
+        <div style="width: 278px; height: 56px; left: 107px; top: 820px; position: absolute"><span style="color: white; font-size: 24px; font-family: Alternate Gothic No.1; font-weight: 800; word-wrap: break-word">8 (915) 051-26-04<br/></span><span style="color: white; font-size: 20px; font-family: Georgia; font-weight: 300; word-wrap: break-word">Контактный центр</span></div>
+        <div style="width: 319px; height: 59px; left: 443px; top: 820px; position: absolute"><span style="color: white; font-size: 24px; font-family: Alternate Gothic No.1; font-weight: 800; word-wrap: break-word">8 (977) 811-88-87<br/></span><span style="color: white; font-size: 20px; font-family: Georgia; font-weight: 300; word-wrap: break-word">Отдел заботы о пользователях</span></div>
     <aside>
         <ul>
-            <div style="left: 27px; top: 15px; position: absolute; color: white; font-size: 40px; font-family:Alternate Gothic No.1; font-weight: 610; word-wrap: break-word"><a href="page"><li>TravelHelp</li></a></div>
             <div style="width: 408px; height: 93px; left: 107px; top: 898px; position: absolute; color: white; font-size: 16px; font-family: Alternate Gothic No.1; font-weight: 400; word-wrap: break-word"><a href="rules"><li>Правила пользования платформой</li></a></div>
             <div style="width: 408px; height: 93px; left: 107px; top: 938px; position: absolute; color: white; font-size: 16px; font-family: Alternate Gothic No.1; font-weight: 400; word-wrap: break-word"><a href="politicconf"><li>Политика конфиденциальности</li></a></div>
             <div style="width: 408px; height: 93px; left: 107px; top: 978px; position: absolute; color: white; font-size: 16px; font-family: Alternate Gothic No.1; font-weight: 400; word-wrap: break-word"><a href="faq"><li>FAQ</li></a></div>
@@ -30,11 +31,13 @@
             <span>{{ error }}</span>
                 <button id="save_button" type="submit" class="btn btn-success" style="width: 100px; height: 50px; left: 1000px; top: 475px; position: absolute">Ответить</button>
         </form>
-        <div style="width: 886px; height: 143px; left: 264px; top: 165px; position: absolute; text-align: center; color: white; font-size: 48px; font-family: Alternate Gothic No.1; font-weight: 700; line-height: 72px; word-wrap: break-word">Какой тип жилья Вы предпочитаете?<br>(отель, апартаменты, хостел, частный дом)</div>
+    
+        <p id="response_message" style="position: absolute; top: 100px; left: 20px;"></p>
+    
+        <div style="width: 886px; height: 143px; left: 264px; top: 223px; position: absolute; text-align: center; color: white; font-size: 48px; font-family: Alternate Gothic No.1; font-weight: 700; line-height: 72px; word-wrap: break-word">Сколько человек оправляется в путешествие (включая детей)?</div>
     <aside>
-        <ul>
-            <div style="left: 200px; top: 642px; position: absolute; color: #F57377; font-size: 25px; font-family: Alternate Gothic No.1; font-weight: 700; line-height: 72px; word-wrap: break-word"><a href="page5"><li>Предыдущий</li></a></div> 
-            <div style="left: 1048px; top: 642px; position: absolute; color: #F57377; font-size: 25px; font-family: Alternate Gothic No.1; font-weight: 700; line-height: 72px; word-wrap: break-word"><a href="page8"><li>Следующий</li></a></div>
+        <ul> 
+            <div style="left: 1048px; top: 642px; position: absolute; color: #F57377; font-size: 25px; font-family: Alternate Gothic No.1; font-weight: 700; line-height: 72px; word-wrap: break-word"><a href="page1"><li>Следующий</li></a></div>
         </ul>
     </aside>
         <div style="width: 1385px; height: 100px; left: 27px; top: 20px; position: absolute; background: #2C6B76; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) inset; border-radius: 55px; overflow: hidden; border: 1px black solid">
@@ -48,14 +51,15 @@
     </aside>
     <aside>
         <ul>
+            <div style="left: 872px; top: 14px; position: absolute; color: white; font-size: 25px; font-family: Alternate Gothic No.1; font-weight: 400; line-height: 72px; word-wrap: break-word"><a href="faq"><li>FAQ</li></a></div>
+            <div style="left: 1041px; top: 14px; position: absolute; color: white; font-size: 25px; font-family: Alternate Gothic No.1; font-weight: 400; line-height: 72px; word-wrap: break-word"><a href="aboutus"><li>О нас</li></a></div>
             <div style="left: -1170px; top: 0px; position: absolute; color: white; font-size: 40px; font-family:Alternate Gothic No.1; font-weight: 610; word-wrap: break-word"><a href="page"><li>TravelHelp</li></a></div>    
+        <ul>
     </aside>
         </div>
         <div style="left: 523px; top: 30px; position: absolute; color: white; font-size: 24px; font-family: Alternate Gothic No.1; font-weight: 600; word-wrap: break-word">8(995) 500-44-65</div>
         <img style="width: 50px; height: 50px; left: 460px; top: 25px; position: absolute; border-radius: 9999px" src="{% static 'main/img/phone.png' %}" />
         </div>
     </div>
-</body>
-</html>
 </body>
 </html>
