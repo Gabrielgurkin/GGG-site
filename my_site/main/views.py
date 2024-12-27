@@ -4,12 +4,7 @@ from .forms import UserInputForm
 
 
 
-def index(request):
-    data = {
-        'title': 'Главная страница',
-        'values' : ['Some', 'Hello', '123'] 
-    }
-    return render(request, "main/index.html", data)
+
 
 def page(request):
     return render(request, "main/page.html")
@@ -300,5 +295,27 @@ def page11(request):
     }
 
     return render(request, 'main/page11.html', data)
+
+def page14(request):
+    error = ''
+    if request.method == 'POST':
+        form = UserInputForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return render(request, 'main/page14.html')
+        else:
+            error = 'Введён неккоректный ответ'
+
+
+    else:
+        form = UserInputForm()
+
+    data = {
+        'form': form,
+        'error': error
+    }
+
+    return render(request, 'main/page14.html', data)
+
 
 
